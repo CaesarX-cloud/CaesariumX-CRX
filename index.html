@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaesariumX - CRX</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            margin: 20px;
-        }
-        .button:hover {
-            background-color: #218838;
-        }
-        footer {
-            margin-top: 50px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .social-links a {
-            color: white;
-            font-size: 1.5em;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to CaesariumX (CRX)</h1>
-    <h2>Your Token for Change</h2>
-    <p>Empowering global charitable initiatives while providing investment opportunities for all.</p>
-    
-    <a href="https://raw.githubusercontent.com/CaesarX-cloud/CaesariumX-CRX/b86593179b88891a6236116422f1a3b242567df1/CaesariumX_Whitepaper.pdf" download class="button">Download Whitepaper</a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CaesariumX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
 
-    <h3>How to Buy</h3>
-    <p>To purchase CaesariumX (CRX), please visit our presale page on DxSale and follow the instructions to buy using Ethereum.</p>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000000cc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    <footer>
-        <div class="social-links">
-            <a href="https://x.com/CaesariumX" target="_blank">Twitter</a>
-            <a href="https://discord.gg/2nwABWxR" target="_blank">Discord</a>
-        </div>
-    </footer>
-</body>
-</html>
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .menu-button {
+      background: white;
+      color: black;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Corinthian_columns%2C_Split%2C_Croatia.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
