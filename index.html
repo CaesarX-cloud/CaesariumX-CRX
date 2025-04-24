@@ -21,21 +21,53 @@
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative;
       padding: 1.5rem 2rem;
       background-color: #000;
       border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo img {
       height: 50px;
     }
 
-    .nav-buttons {
+    .menu-toggle {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
-      gap: 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 100%;
+      right: 2rem;
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    .nav-buttons.show {
+      display: flex;
     }
 
     .nav-buttons a {
@@ -44,7 +76,8 @@
       padding: 0.5rem 1rem;
       border-radius: 4px;
       font-weight: bold;
-      transition: all 0.3s ease;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
 
     .nav-buttons a:hover {
@@ -162,7 +195,6 @@
       border-top: 1px solid #333;
     }
 
-    /* New Section */
     .token-info {
       background-color: #000;
       color: #fff;
@@ -199,7 +231,12 @@
     <div class="logo">
       <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
     </div>
-    <div class="nav-buttons">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-buttons" id="navButtons">
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
       <a href="public-sale.html">Public Sale</a>
     </div>
@@ -239,7 +276,6 @@
     </div>
   </div>
 
-  <!-- New Section at the Bottom -->
   <section class="token-info">
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
     <div class="text">
@@ -253,5 +289,10 @@
     &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('navButtons').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
