@@ -13,7 +13,6 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
-      line-height: 1.6;
     }
 
     a {
@@ -29,7 +28,6 @@
       background-color: #000;
       border-bottom: 1px solid #333;
       position: relative;
-      flex-wrap: wrap;
     }
 
     .logo img {
@@ -66,7 +64,7 @@
     }
 
     .menu-btn {
-      display: none;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 24px;
@@ -166,7 +164,7 @@
     }
 
     .socials a:hover {
-      background-color: #ddd;
+      background-color: #fff;
       color: #000;
     }
 
@@ -230,7 +228,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 4rem 2rem;
-      flex-wrap: wrap;
     }
 
     .token-info img {
@@ -252,72 +249,6 @@
       font-size: 1.2rem;
       color: #ccc;
     }
-
-    /* Media Queries for Mobile */
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 3rem;
-      }
-
-      .hero-text .tagline {
-        font-size: 1.5rem;
-      }
-
-      .columns {
-        flex-direction: column;
-        padding: 2rem 1rem;
-      }
-
-      .column {
-        width: 100%;
-        margin-bottom: 2rem;
-      }
-
-      .nav-buttons {
-        display: none; /* Hide nav on smaller screens */
-      }
-
-      .menu-btn {
-        display: block; /* Show menu button for mobile */
-      }
-
-      .menu {
-        padding: 1rem;
-      }
-
-      .menu a {
-        font-size: 1.5rem;
-      }
-
-      .token-info {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .token-info .text {
-        width: 100%;
-        padding: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-text .tagline {
-        font-size: 1.3rem;
-      }
-
-      .buy-btn {
-        padding: 0.6rem 1rem;
-      }
-
-      .etherscan-btn {
-        padding: 0.4rem 0.8rem;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -389,19 +320,18 @@
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
     <div class="text">
       <h2>About CaesariumX</h2>
-      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but also through social good.</p>
+      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but through strategic growth that reflects the resilience of the Caesars themselves. Join the movement and unlock the power within!</p>
     </div>
-    <img src="https://i.imgur.com/dHvduDZ.png" alt="Roman Art Right" />
+    <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Right" />
   </section>
 
   <footer>
-    <p>&copy; 2025 CaesariumX - All Rights Reserved</p>
+    &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('open');
+      document.getElementById('menu').classList.toggle('open');
     }
   </script>
 
