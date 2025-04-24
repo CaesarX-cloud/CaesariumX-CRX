@@ -52,3 +52,138 @@
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+
+    .whitepaper-btn {
+      background: #ffd700;
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .socials a {
+      display: block;
+      margin: 0.5rem 0;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .buy-btn {
+      margin-top: 1rem;
+      background: #00ffcc;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contract {
+      font-size: 0.9rem;
+      word-break: break-all;
+      margin-bottom: 1rem;
+      color: #aaa;
+    }
+
+    .etherscan-btn {
+      background: #fff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CaesariumX</div>
+    <button class="menu-button">Whitepaper</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <button class="whitepaper-btn">Whitepaper</button>
+      <h1>CaesariumX</h1>
+      <div class="tagline">Power to the Holders • Strength of the Ancient</div>
+    </div>
+  </section>
+
+  <section class="columns">
+    <div class="column socials">
+      <a href="https://x.com/CaesariumX" target="_blank">Twitter</a>
+      <a href="#">Telegram</a>
+      <a href="#">Discord</a>
+    </div>
+
+    <div class="column center">
+      <img src="https://i.imgur.com/O5YqurF.png" alt="CRX Logo"/>
+      <button class="buy-btn">Buy $CRX</button>
+    </div>
+
+    <div class="column">
+      <div class="contract">0x1234...abcd</div>
+      <a href="https://etherscan.io/address/0x1234abcd" target="_blank" class="etherscan-btn">View on Etherscan</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 CaesariumX • Contact: ghasscc@gmail.com
+  </footer>
+
+</body>
+</html>
