@@ -13,6 +13,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
+      line-height: 1.6;
     }
 
     a {
@@ -65,7 +66,7 @@
     }
 
     .menu-btn {
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-between;
       height: 24px;
@@ -388,18 +389,19 @@
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
     <div class="text">
       <h2>About CaesariumX</h2>
-      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but through strategic growth that reflects the resilience of the Caesars themselves. Join the movement and unlock the power within!</p>
+      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but also through social good.</p>
     </div>
-    <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Right" />
+    <img src="https://i.imgur.com/dHvduDZ.png" alt="Roman Art Right" />
   </section>
 
   <footer>
-    &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
+    <p>&copy; 2025 CaesariumX - All Rights Reserved</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('menu').classList.toggle('open');
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
     }
   </script>
 
