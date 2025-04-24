@@ -30,9 +30,20 @@
       position: relative;
     }
 
+    /* Rotating Logo Animation */
     .logo img {
       height: 50px;
-      transition: 0.3s ease;
+      transition: 2s ease-in-out;
+      animation: rotateLogo 5s infinite linear;
+    }
+
+    @keyframes rotateLogo {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .nav-buttons {
