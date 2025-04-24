@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +34,16 @@
     .logo img {
       height: 50px;
       transition: 2s ease-in-out;
-      animation: rotateLogo 5s infinite linear;
+      animation: rotateLogo 5s infinite linear; /* Infinite loop for horizontal rotation */
     }
 
     @keyframes rotateLogo {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
+      0% {
+        transform: rotateY(0deg); /* Starting point */
+      }
+      100% {
+        transform: rotateY(360deg); /* Ending point (full horizontal rotation) */
+      }
     }
 
     .nav-buttons {
@@ -75,6 +80,7 @@
       transition: 0.3s ease;
     }
 
+    /* Hamburger Menu */
     .menu {
       display: none;
       position: absolute;
@@ -119,17 +125,17 @@
     }
 
     .hero-img {
-      width: 100px;
+      width: 120px;
       height: auto;
     }
 
     .hero-text h1 {
-      font-size: 4rem;
+      font-size: 5rem;
       margin: 0.5rem 0;
     }
 
     .hero-text .tagline {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #aaa;
     }
 
@@ -178,7 +184,6 @@
       border-radius: 6px;
       cursor: pointer;
       transition: 0.3s;
-      font-size: 1rem;
     }
 
     .buy-btn:hover {
@@ -187,7 +192,7 @@
     }
 
     .contract {
-      word-break: break-word;
+      word-break: break-all;
       font-size: 0.9rem;
       color: #ccc;
       margin-bottom: 1rem;
@@ -216,6 +221,7 @@
       border-top: 1px solid #333;
     }
 
+    /* New Section */
     .token-info {
       background-color: #000;
       color: #fff;
@@ -223,12 +229,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 4rem 2rem;
-      flex-wrap: wrap;
-      gap: 2rem;
     }
 
     .token-info img {
-      width: 100px;
+      width: 120px;
       height: auto;
     }
 
@@ -238,88 +242,99 @@
     }
 
     .token-info .text h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     .token-info .text p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #ccc;
-    }
-
-    /* Mobile Adjustments */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 3rem 1rem 2rem;
-      }
-
-      .hero-content {
-        gap: 1rem;
-        flex-direction: column;
-      }
-
-      .hero-img {
-        width: 50px;
-      }
-
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-text .tagline {
-        font-size: 1rem;
-      }
-
-      .buy-btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-
-      .nav-buttons a {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-      }
-
-      .token-info {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        text-align: center;
-      }
-
-      .token-info img {
-        display: none;
-      }
-
-      .token-info .text h2 {
-        font-size: 1.4rem;
-      }
-
-      .token-info .text p {
-        font-size: 0.9rem;
-      }
-
-      .columns {
-        padding: 2rem 1rem;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .column {
-        min-width: 100%;
-      }
-
-      header {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .logo img {
-        height: 40px;
-      }
     }
   </style>
 </head>
 <body>
-  <!-- Your HTML content here -->
+
+  <header>
+    <!-- Menu Button (Visible in the top left) -->
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Logo (Centered) -->
+    <div class="logo" style="position: absolute; left: 50%; transform: translateX(-50%);">
+      <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
+      <a href="public-sale.html">Public Sale</a>
+    </div>
+  </header>
+
+  <!-- Menu Section (Hidden initially) -->
+  <div class="menu" id="menu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#socials">Follow Us</a>
+    <a href="public-sale.html">Public Sale</a>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <img src="https://i.imgur.com/qcS2sax.png" alt="Roman Branch" class="hero-img" />
+      <div class="hero-text">
+        <h1>CaesariumX</h1>
+        <div class="tagline">Power to the Holders • Strength of the Ancient</div>
+      </div>
+      <img src="https://i.imgur.com/0NfawQU.png" alt="Roman Branch" class="hero-img" />
+    </div>
+  </section>
+
+  <div class="columns" id="about">
+    <div class="column socials" id="socials">
+      <h2 style="margin-bottom: 1rem;">Follow Us</h2>
+      <a href="https://x.com/CaesariumX" target="_blank">X (Twitter)</a>
+      <a href="https://discord.gg/2nwABWxR" target="_blank">Discord</a>
+      <a href="#" target="_blank">Reddit</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+
+    <div class="column center">
+      <h2 style="margin-bottom: 1.2rem;">Join the Public Sale</h2>
+      <a href="public-sale.html" class="buy-btn" style="font-size: 1.2rem; padding: 0.8rem 1.5rem; display: inline-block;">$CRX Token</a>
+    </div>
+
+    <div class="column" style="margin-top: 2rem;">
+      <div class="contract">
+        Contract:<br>0x699133f4Fe4eD7232B88f1520927be03D26540FC
+      </div>
+      <a class="etherscan-btn" href="https://etherscan.io/address/0x699133f4Fe4eD7232B88f1520927be03D26540FC" target="_blank">View on Etherscan</a>
+    </div>
+  </div>
+
+  <!-- New Section at the Bottom -->
+  <section class="token-info">
+    <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
+    <div class="text">
+      <h2>About CaesariumX</h2>
+      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but through strategic growth that reflects the resilience of the Caesars themselves. Join the movement and unlock the power within!</p>
+    </div>
+    <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Right" />
+  </section>
+
+  <footer>
+    &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('open');
+    }
+  </script>
+
 </body>
 </html>
