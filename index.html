@@ -27,10 +27,12 @@
       padding: 1.5rem 2rem;
       background-color: #000;
       border-bottom: 1px solid #333;
+      position: relative;
     }
 
     .logo img {
       height: 50px;
+      transition: 0.3s ease;
     }
 
     .nav-buttons {
@@ -49,6 +51,52 @@
 
     .nav-buttons a:hover {
       background: #ddd;
+    }
+
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 24px;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .menu-btn div {
+      height: 4px;
+      background-color: #fff;
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    /* Hamburger Menu */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu a {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+      background-color: #333;
+    }
+
+    .menu.open {
+      display: block;
     }
 
     .hero {
@@ -196,16 +244,34 @@
 <body>
 
   <header>
-    <div class="logo">
+    <!-- Menu Button -->
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Logo (Centered) -->
+    <div class="logo" style="position: absolute; left: 50%; transform: translateX(-50%);">
       <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
     </div>
+
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
       <a href="public-sale.html">Public Sale</a>
     </div>
   </header>
 
-  <section class="hero">
+  <!-- Menu Section -->
+  <div class="menu" id="menu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#socials">Follow Us</a>
+    <a href="public-sale.html">Public Sale</a>
+  </div>
+
+  <section class="hero" id="hero">
     <div class="hero-content">
       <img src="https://i.imgur.com/qcS2sax.png" alt="Roman Branch" class="hero-img" />
       <div class="hero-text">
@@ -216,8 +282,8 @@
     </div>
   </section>
 
-  <div class="columns">
-    <div class="column socials">
+  <div class="columns" id="about">
+    <div class="column socials" id="socials">
       <h2 style="margin-bottom: 1rem;">Follow Us</h2>
       <a href="https://x.com/CaesariumX" target="_blank">X (Twitter)</a>
       <a href="https://discord.gg/2nwABWxR" target="_blank">Discord</a>
@@ -252,6 +318,12 @@
   <footer>
     &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
