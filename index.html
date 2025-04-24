@@ -54,7 +54,7 @@
     }
 
     .menu-btn {
-      display: none;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 24px;
@@ -244,7 +244,7 @@
 <body>
 
   <header>
-    <!-- Menu Button -->
+    <!-- Menu Button (Visible in the top left) -->
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -263,7 +263,7 @@
     </div>
   </header>
 
-  <!-- Menu Section -->
+  <!-- Menu Section (Hidden initially) -->
   <div class="menu" id="menu">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
