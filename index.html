@@ -33,15 +33,15 @@
     .logo img {
       height: 50px;
       transition: 2s ease-in-out;
-      animation: rotateLogo 5s infinite linear; /* Infinite loop for horizontal rotation */
+      animation: rotateLogo 5s infinite linear;
     }
 
     @keyframes rotateLogo {
       0% {
-        transform: rotateY(0deg); /* Starting point */
+        transform: rotateY(0deg);
       }
       100% {
-        transform: rotateY(360deg); /* Ending point (full horizontal rotation) */
+        transform: rotateY(360deg);
       }
     }
 
@@ -79,7 +79,6 @@
       transition: 0.3s ease;
     }
 
-    /* Hamburger Menu */
     .menu {
       display: none;
       position: absolute;
@@ -220,7 +219,6 @@
       border-top: 1px solid #333;
     }
 
-    /* New Section */
     .token-info {
       background-color: #000;
       color: #fff;
@@ -249,31 +247,102 @@
       font-size: 1.2rem;
       color: #ccc;
     }
+
+    /* Mobile Responsive Fixes */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .logo {
+        position: static;
+        transform: none;
+        margin: 1rem auto;
+      }
+
+      .nav-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .nav-buttons a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .hero-text .tagline {
+        font-size: 1.2rem;
+      }
+
+      .columns {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .token-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .token-info img {
+        width: 80px;
+        margin-bottom: 1rem;
+      }
+
+      .token-info .text h2 {
+        font-size: 2rem;
+      }
+
+      .token-info .text p {
+        font-size: 1rem;
+      }
+
+      .menu-btn {
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Menu Button (Visible in the top left) -->
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
 
-    <!-- Logo (Centered) -->
     <div class="logo" style="position: absolute; left: 50%; transform: translateX(-50%);">
       <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
     </div>
 
-    <!-- Navigation Buttons -->
     <div class="nav-buttons">
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
       <a href="public-sale.html">Public Sale</a>
     </div>
   </header>
 
-  <!-- Menu Section (Hidden initially) -->
   <div class="menu" id="menu">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
@@ -315,7 +384,6 @@
     </div>
   </div>
 
-  <!-- New Section at the Bottom -->
   <section class="token-info">
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
     <div class="text">
