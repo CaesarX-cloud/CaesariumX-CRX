@@ -187,7 +187,7 @@
     }
 
     .contract {
-      word-break: break-all;
+      word-break: break-word;
       font-size: 0.9rem;
       color: #ccc;
       margin-bottom: 1rem;
@@ -247,38 +247,79 @@
       color: #ccc;
     }
 
-    /* Responsive Adjustments */
+    /* Mobile Adjustments */
     @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 2.5rem;
+      .hero {
+        padding: 3rem 1rem 2rem;
       }
+
+      .hero-content {
+        gap: 1rem;
+        flex-direction: column;
+      }
+
+      .hero-img {
+        width: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
       .hero-text .tagline {
         font-size: 1rem;
       }
-      .hero-img {
-        width: 60px;
-      }
+
       .buy-btn {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
       }
+
+      .nav-buttons a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+      }
+
+      .token-info {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
       .token-info img {
-        width: 60px;
+        display: none;
       }
+
       .token-info .text h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
+
       .token-info .text p {
         font-size: 0.9rem;
       }
-      .nav-buttons a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
+
+      .columns {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .column {
+        min-width: 100%;
+      }
+
+      header {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 40px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HTML stays the same as you posted, just the styles were updated -->
+  <!-- Your HTML content here -->
 </body>
 </html>
