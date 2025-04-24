@@ -5,58 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CaesariumX</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: #000000cc;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 1.5rem 2rem;
+      background-color: #000;
+      border-bottom: 1px solid #333;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .logo img {
+      height: 50px;
     }
 
-    .menu-button {
-      background: white;
-      color: black;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-buttons a {
+      background: #fff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       font-weight: bold;
-      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background: #ddd;
     }
 
     .hero {
       text-align: center;
       padding: 5rem 2rem 3rem;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Corinthian_columns%2C_Split%2C_Croatia.jpg') no-repeat center center;
-      background-size: cover;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
+      border-bottom: 1px solid #333;
     }
 
     .hero h1 {
@@ -65,124 +63,132 @@
     }
 
     .tagline {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      color: #aaa;
       margin-bottom: 2rem;
-      color: #ccc;
-    }
-
-    .whitepaper-btn {
-      background: #ffd700;
-      color: #000;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
     }
 
     .columns {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      flex-wrap: wrap;
       padding: 3rem 2rem;
       gap: 2rem;
-      flex-wrap: wrap;
     }
 
     .column {
       flex: 1;
-      min-width: 250px;
-    }
-
-    .socials a {
-      display: block;
-      margin: 0.5rem 0;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .center {
+      min-width: 220px;
       text-align: center;
     }
 
+    .socials a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
     .center img {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1rem;
     }
 
     .buy-btn {
-      margin-top: 1rem;
-      background: #00ffcc;
-      color: #000;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
       padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
       font-weight: bold;
+      border-radius: 6px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #fff;
+      color: #000;
     }
 
     .contract {
-      font-size: 0.9rem;
       word-break: break-all;
+      font-size: 0.9rem;
+      color: #ccc;
       margin-bottom: 1rem;
-      color: #aaa;
     }
 
     .etherscan-btn {
+      display: inline-block;
       background: #fff;
       color: #000;
       padding: 0.5rem 1rem;
       border-radius: 4px;
-      text-decoration: none;
       font-weight: bold;
-      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .etherscan-btn:hover {
+      background: #ddd;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
       background: #111;
-      font-size: 0.9rem;
       color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">CaesariumX</div>
-    <button class="menu-button">Whitepaper</button>
+    <div class="logo">
+      <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
+    </div>
+    <div class="nav-buttons">
+      <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
+      <a href="public-sale.html">Public Sale</a>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <button class="whitepaper-btn">Whitepaper</button>
-      <h1>CaesariumX</h1>
-      <div class="tagline">Power to the Holders • Strength of the Ancient</div>
-    </div>
+    <h1>CaesariumX</h1>
+    <div class="tagline">Power to the Holders • Strength of the Ancient</div>
   </section>
 
   <section class="columns">
     <div class="column socials">
-      <a href="https://x.com/CaesariumX" target="_blank">Twitter</a>
-      <a href="#">Telegram</a>
-      <a href="#">Discord</a>
+      <a href="https://x.com/CaesariumX" target="_blank">X</a>
+      <a href="https://discord.gg/2nwABWxR" target="_blank">Discord</a>
     </div>
 
     <div class="column center">
-      <img src="https://i.imgur.com/O5YqurF.png" alt="CRX Logo"/>
-      <button class="buy-btn">Buy $CRX</button>
+      <img src="https://i.imgur.com/lxeYrZ8.png" alt="CRX Logo">
+      <button class="buy-btn">$CRX Token</button>
     </div>
 
     <div class="column">
-      <div class="contract">0x1234...abcd</div>
-      <a href="https://etherscan.io/address/0x1234abcd" target="_blank" class="etherscan-btn">View on Etherscan</a>
+      <div class="contract">
+        Contract:<br>0x699133f4Fe4eD7232B88f1520927be03D26540FC
+      </div>
+      <a class="etherscan-btn" href="https://etherscan.io/address/0x699133f4Fe4eD7232B88f1520927be03D26540FC" target="_blank">View on Etherscan</a>
     </div>
   </section>
 
   <footer>
-    © 2025 CaesariumX • Contact: ghasscc@gmail.com
+    &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
   </footer>
 
 </body>
