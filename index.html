@@ -33,15 +33,15 @@
     .logo img {
       height: 50px;
       transition: 2s ease-in-out;
-      animation: rotateLogo 5s infinite linear;
+      animation: rotateLogo 5s infinite linear; /* Infinite loop for horizontal rotation */
     }
 
     @keyframes rotateLogo {
       0% {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg); /* Starting point */
       }
       100% {
-        transform: rotateY(360deg);
+        transform: rotateY(360deg); /* Ending point (full horizontal rotation) */
       }
     }
 
@@ -113,7 +113,6 @@
       text-align: center;
       padding: 5rem 2rem 3rem;
       border-bottom: 1px solid #333;
-      position: relative;
     }
 
     .hero-content {
@@ -122,7 +121,6 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 3rem;
-      position: relative;
     }
 
     .hero-img {
@@ -222,6 +220,7 @@
       border-top: 1px solid #333;
     }
 
+    /* New Section */
     .token-info {
       background-color: #000;
       color: #fff;
@@ -250,89 +249,31 @@
       font-size: 1.2rem;
       color: #ccc;
     }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      /* Header */
-      header {
-        flex-direction: column;
-        padding: 1.5rem;
-      }
-
-      .logo img {
-        height: 40px;
-      }
-
-      .nav-buttons {
-        display: none; /* Hide nav buttons on mobile */
-      }
-
-      .menu {
-        display: block; /* Show the mobile menu */
-      }
-
-      /* Hero Section */
-      .hero-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .hero-img {
-        width: 100px;
-        margin-bottom: 1rem;
-      }
-
-      /* Leaves on Sides */
-      .hero-text::before,
-      .hero-text::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 100px;
-        height: 100%;
-        background: url('https://i.imgur.com/0pRBeAs.png') no-repeat center center;
-        background-size: contain;
-      }
-
-      .hero-text::before {
-        left: -120px;
-      }
-
-      .hero-text::after {
-        right: -120px;
-      }
-
-      /* Mobile Columns Layout */
-      .columns {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .column {
-        margin-bottom: 2rem;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
+    <!-- Menu Button (Visible in the top left) -->
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
 
+    <!-- Logo (Centered) -->
     <div class="logo" style="position: absolute; left: 50%; transform: translateX(-50%);">
       <img src="https://i.imgur.com/lxeYrZ8.png" alt="CaesariumX Logo">
     </div>
 
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
       <a href="public-sale.html">Public Sale</a>
     </div>
   </header>
 
+  <!-- Menu Section (Hidden initially) -->
   <div class="menu" id="menu">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
@@ -363,7 +304,7 @@
 
     <div class="column center">
       <h2 style="margin-bottom: 1.2rem;">Join the Public Sale</h2>
-      <a href="public-sale.html" class="buy-btn" style="font-size: 1.2rem; padding: 0.8rem 1.5rem;">$CRX Token</a>
+      <a href="public-sale.html" class="buy-btn" style="font-size: 1.2rem; padding: 0.8rem 1.5rem; display: inline-block;">$CRX Token</a>
     </div>
 
     <div class="column" style="margin-top: 2rem;">
@@ -374,23 +315,23 @@
     </div>
   </div>
 
+  <!-- New Section at the Bottom -->
   <section class="token-info">
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Left" />
     <div class="text">
       <h2>About CaesariumX</h2>
-      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Join us in building the future of decentralized finance.</p>
+      <p>CaesariumX ($CRX) is more than just a token—it's a legacy. Empowering holders with its strength and rooted in the grandeur of ancient Rome, it is designed to provide long-term value while supporting a charitable cause. We aim to make a difference, not only through the strength of the community but through strategic growth that reflects the resilience of the Caesars themselves. Join the movement and unlock the power within!</p>
     </div>
     <img src="https://i.imgur.com/0pRBeAs.png" alt="Roman Art Right" />
   </section>
 
   <footer>
-    &copy; 2025 CaesariumX | All rights reserved
+    &copy; 2025 CaesariumX • Contact: <a href="mailto:caesariumx@outlook.com">caesariumx@outlook.com</a>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('open');
+      document.getElementById('menu').classList.toggle('open');
     }
   </script>
 
