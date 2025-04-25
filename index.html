@@ -73,6 +73,10 @@
     }
 
     .menu-btn {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      z-index: 1000;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -118,9 +122,8 @@
       display: block;
     }
 
-    /* Mobile Top Buttons */
     .mobile-top-buttons {
-      display: none; /* Hidden by default */
+      display: none;
     }
 
     .hero {
@@ -263,7 +266,6 @@
       color: #ccc;
     }
 
-    /* MOBILE RESPONSIVE STYLES */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -372,7 +374,6 @@
       <a href="public-sale.html">Public Sale</a>
     </div>
 
-    <!-- Mobile-only buttons -->
     <div class="mobile-top-buttons">
       <a href="public-sale.html">Public Sale</a>
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
