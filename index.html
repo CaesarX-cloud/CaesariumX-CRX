@@ -28,6 +28,7 @@
       background-color: #000;
       border-bottom: 1px solid #333;
       position: relative;
+      flex-wrap: wrap;
     }
 
     .logo img {
@@ -44,9 +45,6 @@
     .nav-buttons {
       display: flex;
       gap: 1rem;
-      position: absolute;
-      top: 1.5rem;
-      right: 2rem;
     }
 
     .nav-buttons a {
@@ -56,7 +54,6 @@
       border-radius: 4px;
       font-weight: bold;
       transition: all 0.3s ease;
-      font-size: 0.9rem;
     }
 
     .nav-buttons a:hover {
@@ -64,13 +61,12 @@
     }
 
     .menu-btn {
-      display: none;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 24px;
       width: 30px;
       cursor: pointer;
-      z-index: 1001;
     }
 
     .menu-btn div {
@@ -90,6 +86,7 @@
       text-align: center;
       padding: 1rem;
       box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 999;
     }
 
     .menu a {
@@ -249,24 +246,99 @@
       color: #ccc;
     }
 
+    /* MOBILE RESPONSIVE STYLES */
     @media (max-width: 768px) {
-      .hero-img,
-      .token-info img {
-        display: none !important;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
       }
-      .menu-btn {
-        display: flex;
+
+      .logo {
+        position: static !important;
+        transform: none !important;
+        margin: 1rem auto;
       }
+
       .nav-buttons {
+        display: none;
+      }
+
+      .mobile-top-buttons {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
         flex-direction: column;
         gap: 0.5rem;
-        top: 4rem;
-        right: 1rem;
+        z-index: 1000;
+      }
+
+      .mobile-top-buttons a {
+        background: #fff;
+        color: #000;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .hero-text .tagline {
+        font-size: 1.2rem;
+      }
+
+      .hero-img {
+        display: none;
+      }
+
+      .columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .token-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .token-info img {
+        width: 80px;
+        margin: 1rem 0;
+      }
+
+      .token-info .text h2 {
+        font-size: 1.8rem;
+      }
+
+      .token-info .text p {
+        font-size: 1rem;
+      }
+
+      .buy-btn {
+        font-size: 1rem !important;
+        padding: 0.6rem 1.2rem !important;
+      }
+
+      .etherscan-btn {
+        margin-top: 1rem;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
@@ -281,6 +353,12 @@
     <div class="nav-buttons">
       <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
       <a href="public-sale.html">Public Sale</a>
+    </div>
+
+    <!-- Mobile-only buttons -->
+    <div class="mobile-top-buttons">
+      <a href="public-sale.html">Public Sale</a>
+      <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
     </div>
   </header>
 
@@ -343,5 +421,6 @@
       document.getElementById('menu').classList.toggle('open');
     }
   </script>
+
 </body>
 </html>
