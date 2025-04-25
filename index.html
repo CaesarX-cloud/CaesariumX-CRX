@@ -29,6 +29,7 @@
       background-color: #000;
       border-bottom: 1px solid #333;
       position: relative;
+      min-height: 80px; /* ✅ Added so buttons/menu don’t go under the line */
     }
 
     .logo {
@@ -73,16 +74,16 @@
     }
 
     .menu-btn {
-      position: absolute;
+      position: absolute; /* ✅ Moved menu to top-left */
       top: 1.5rem;
       left: 2rem;
-      z-index: 1000;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 24px;
       width: 30px;
       cursor: pointer;
+      z-index: 2;
     }
 
     .menu-btn div {
@@ -266,6 +267,7 @@
       color: #ccc;
     }
 
+    /* MOBILE RESPONSIVE STYLES */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
