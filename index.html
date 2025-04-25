@@ -292,7 +292,9 @@
     </div>
 
     <div class="nav-buttons">
-      <a href="CaesariumX_Whitepaper (1).pdf" download>Whitepaper</a>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#socials">Follow Us</a>
       <a href="public-sale.html">Public Sale</a>
     </div>
 
@@ -324,6 +326,18 @@
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('open');
     }
+
+    // Close mobile menu on link click
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuLinks = document.querySelectorAll('#menu a');
+      const menu = document.getElementById('menu');
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+        });
+      });
+    });
   </script>
 </body>
 </html>
